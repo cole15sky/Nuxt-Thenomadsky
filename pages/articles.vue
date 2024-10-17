@@ -23,4 +23,46 @@
             </article>
         </div>
     </main>
-</template>
+    <div class="container mx-auto p-6">
+      <h1 class="text-2xl font-bold mb-4">Article List</h1>
+      <table class="min-w-full table-auto border-collapse border border-gray-300">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-4 py-2">SN</th>
+            <th class="border px-4 py-2">Title</th>
+            <th class="border px-4 py-2">Date of Publish</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop through articles and display them in the table -->
+          <tr v-for="(article, index) in articles" :key="article.id" class="hover:bg-gray-50">
+            <td class="border px-4 py-2">{{ index + 1 }}</td>
+            <td class="border px-4 py-2 text-blue-500 hover:underline cursor-pointer">
+              <!-- Clicking title navigates to article's detail page -->
+              <router-link :to="`/article/${article.id}`">{{ article.title }}</router-link>
+            </td>
+            <td class="border px-4 py-2">{{ article.publishDate }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: 'ArticleList',
+    data() {
+      return {
+        articles: [
+          { id: 1, title: 'Pink Hopes', publishDate: '2023-10-10' },
+          { id: 2, title: ' Saturday 24 2019', publishDate: '2019-02-12' },
+          { id: 3, title: 'Flying High Hopes.', publishDate: '2023-10-15' }
+        ]
+      };
+    }
+  }
+  </script>
+  
+  <style scoped>
+  </style>
+  
