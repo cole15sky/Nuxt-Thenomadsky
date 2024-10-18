@@ -2,18 +2,13 @@
   <div>
     <nav
       class="bg-gradient-to-r from-indigo-600 via-red-600 to-blue-600 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <!-- Logo and Title -->
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-8">
         <a class="flex items-center space-x-3 rtl:space-x-reverse">
-          <NuxtLink to="/">
           <img src="/Assets/logo_sky.png" class="h-8" alt="Logo">
-        </NuxtLink>
-          <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">
-            Tech-NomadSky  </span>
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Tech-NomadSky</span>
         </a>
-
-        <!-- Mobile Menu Toggle Button -->
-        <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
+         <!-- Mobile Menu Toggle Button -->
+         <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
           <button @click="isMenuOpen = !isMenuOpen" type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-sticky" aria-expanded="isMenuOpen">
