@@ -100,7 +100,7 @@
               <NuxtLink class="hover:underline me-4 md:me-6" to="/gallery">Gallery</NuxtLink>
             </li>
             <li>
-              <NuxtLink class="hover:underline me-4 md:me-6" to="/articles">Articles</NuxtLink>
+              <NuxtLink class="hover:underline me-4 md:me-6" to="/articles/articles">Articles</NuxtLink>
             </li>
           </ul>
         </div>

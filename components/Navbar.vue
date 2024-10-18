@@ -74,8 +74,9 @@
               </svg>
               <NuxtLink
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                to="/articles">Articles</NuxtLink>
+                to="/articles/articles">Articles</NuxtLink>
             </li>
+
             <li class="flex items-center space-x-2">
               <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
