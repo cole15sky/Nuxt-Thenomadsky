@@ -9,10 +9,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
 
-// Simulating a data source (you can replace this with an API call)
 const articlesData = [
   { id: 1, title: 'Pink Hopes', publishDate: '2023-10-10', content: 'Content for Pink Hopes article.' },
   { id: 2, title: 'Saturday 24 2019', publishDate: '2019-02-12', content: 'Content for Saturday 24 article.' },
