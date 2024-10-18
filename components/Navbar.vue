@@ -1,68 +1,67 @@
 <template>
   <div>
     <nav
-      class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+      class="bg-gradient-to-r from-indigo-600 via-red-600 to-blue-600 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <!-- Logo and Title -->
         <a class="flex items-center space-x-3 rtl:space-x-reverse">
+          <NuxtLink to="/">
           <img src="/Assets/logo_sky.png" class="h-8" alt="Logo">
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Tech-NomadSky</span>
+        </NuxtLink>
+          <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">
+            Tech-NomadSky  </span>
         </a>
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <button data-collapse-toggle="navbar-sticky" type="button"
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
+          <button @click="isMenuOpen = !isMenuOpen" type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky" aria-expanded="false">
+            aria-controls="navbar-sticky" aria-expanded="isMenuOpen">
             <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <svg v-if="!isMenuOpen" class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M1 1h15M1 7h15M1 13h15" />
             </svg>
+            <svg v-if="isMenuOpen" class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+
+        <!-- Navbar Links (Responsive) -->
+        <div :class="['items-center justify-between w-full md:flex md:w-auto md:order-1', isMenuOpen ? '' : 'hidden']"
+          id="navbar-sticky">
           <ul
-            class=" text-md flex flex-col p-4 md:p-0 mt-4 font-medium border  rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            class="text-md flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+
+            <!-- Home -->
             <li class="flex items-center space-x-2">
-              <svg width="20px" height="20px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M8 0L0 6V8H1V15H4V10H7V15H15V8H16V6L14 4.5V1H11V2.25L8 0ZM9 10H12V13H9V10Z" fill="#ffffff">
-                  </path>
-                </g>
+              <svg class="w-5 h-5 md:w-6 md:h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0L0 6V8H1V15H4V10H7V15H15V8H16V6L14 4.5V1H11V2.25L8 0ZM9 10H12V13H9V10Z" fill="white" />
               </svg>
-              <NuxtLink
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                to="/">Home</NuxtLink>
+              <NuxtLink class="block py-2 px-3 text-white hover:text-gray-800" to="/">Home</NuxtLink>
             </li>
+
+            <!-- About -->
             <li class="flex items-center space-x-2">
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64"
-                enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000" transform="rotate(0)">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <g>
-                    <g>
-                      <path fill="#ffffff"
-                        d="M63.329,57.781C62.954,57.219,53.892,44,31.999,44C10.112,44,1.046,57.219,0.671,57.781 c-1.223,1.84-0.727,4.32,1.109,5.547c1.836,1.223,4.32,0.727,5.547-1.109C7.397,62.117,14.347,52,31.999,52 c17.416,0,24.4,9.828,24.674,10.219C57.446,63.375,58.712,64,60.009,64c0.758,0,1.531-0.219,2.211-0.672 C64.056,62.102,64.556,59.621,63.329,57.781z">
-                      </path>
-                      <path fill="#ffffff"
-                        d="M31.999,40c8.836,0,16-7.16,16-16v-8c0-8.84-7.164-16-16-16s-16,7.16-16,16v8 C15.999,32.84,23.163,40,31.999,40z M23.999,16c0-4.418,3.586-8,8-8c4.422,0,8,3.582,8,8v8c0,4.418-3.578,8-8,8 c-4.414,0-8-3.582-8-8V16z">
-                      </path>
-                    </g>
-                    <path fill="#F9EBB2"
-                      d="M23.999,16c0-4.418,3.586-8,8-8c4.422,0,8,3.582,8,8v8c0,4.418-3.578,8-8,8c-4.414,0-8-3.582-8-8V16z">
-                    </path>
-                  </g>
-                </g>
+              <svg class="w-5 h-5 md:w-6 md:h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 64 64">
+                <path fill="white"
+                  d="M63.329,57.781C62.954,57.219,53.892,44,31.999,44C10.112,44,1.046,57.219,0.671,57.781 c-1.223,1.84-0.727,4.32,1.109,5.547c1.836,1.223,4.32,0.727,5.547-1.109C7.397,62.117,14.347,52,31.999,52 c17.416,0,24.4,9.828,24.674,10.219C57.446,63.375,58.712,64,60.009,64c0.758,0,1.531-0.219,2.211-0.672 C64.056,62.102,64.556,59.621,63.329,57.781z" />
+                <path fill="white"
+                  d="M31.999,40c8.836,0,16-7.16,16-16v-8c0-8.84-7.164-16-16-16s-16,7.16-16,16v8 C15.999,32.84,23.163,40,31.999,40z M23.999,16c0-4.418,3.586-8,8-8c4.422,0,8,3.582,8,8v8c0,4.418-3.578,8-8,8 c-4.414,0-8-3.582-8-8V16z" />
               </svg>
-              <NuxtLink
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                to="/about">About</NuxtLink>
+              <NuxtLink class="block py-2 px-3 text-white hover:text-gray-800" to="/about">About</NuxtLink>
             </li>
-            <li class="flex items-center space-x-2">
-              <svg fill="#ffffff" width="20px" height="20px" viewBox="-2 0 19 19" xmlns="http://www.w3.org/2000/svg"
+
+            <!-- Articles -->
+            <li class="flex items-center space-x">
+              <svg fill="#ffffff" width="25px" height="25px" viewBox="-2 0 19 19" xmlns="http://www.w3.org/2000/svg"
                 class="cf-icon-svg" transform="rotate(90)" stroke="#ffffff">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -72,13 +71,13 @@
                   </path>
                 </g>
               </svg>
-              <NuxtLink
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                to="/articles/articles">Articles</NuxtLink>
+              <NuxtLink class="block py-2 px-3 text-white hover:text-gray-900" to="/articles/articles">Articles</NuxtLink>
+
             </li>
 
-            <li class="flex items-center space-x-2">
-              <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Gallery -->
+            <li class="flex items-center space-x">
+              <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -95,9 +94,8 @@
                   </g>
                 </g>
               </svg>
-              <NuxtLink
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                to="/gallery">Gallery</NuxtLink>
+              <NuxtLink class="block py-2 px-3 text-white hover:text-gray-900" to="/gallery">Gallery</NuxtLink>
+
             </li>
           </ul>
         </div>
@@ -105,3 +103,9 @@
     </nav>
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+
+const isMenuOpen = ref(false);
+</script>
