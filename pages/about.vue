@@ -4,9 +4,7 @@
         <section class="max-w-4xl mx-auto text-center">
           <h1 class="text-4xl lg:text-6xl font-extrabold text-blue-700 dark:text-green-700 mb-6">A Curious Mind</h1>
           <p class="text-xl lg:text-2xl font-semibold text-gray-800 dark:text-gray-600 leading-relaxed">
-            <strong class="text-2xl font-bold">Once upon a time,</strong> inside a country called Nepal, in the shadow of the Himalayas,
-            there was a boy who asked way too many questions, making his parents and teachers mad. As the years went by, he
-            stopped asking silly questions and started asking sillier ones—questions about life, death, coffee, semicolons, and such.
+            <strong class="text-2xl font-bold">In the heart of Nepal,</strong> under the looming presence of the Himalayas, there was a boy who constantly questioned everything, much to the annoyance of his parents and teachers. As he grew older, his inquiries didn’t cease but evolved into more profound and peculiar ones—probing the mysteries of life, death, the nature of coffee, and even the significance of semicolons.
           </p>
           <br />
           <h2 class="text-3xl lg:text-4xl font-bold text-blue-800 dark:text-green-900 mb-4"> I’m </h2>
@@ -14,7 +12,6 @@
             From <span class="text-purple-600 dark:text-blue-900">Chitwan, Nepal</span>
             <br /> Currently a student at <span class="font-semibold text-yellow-700 ">TU-IOST</span>.
             <br />
-            I love solving bugs and logical challenges.
           </p>
           <br />
           <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition duration-300 hover:shadow-lg">

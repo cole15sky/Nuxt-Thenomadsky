@@ -2,7 +2,7 @@
   <main class="pt-8 pb-16 lg:pt-16 mt-14 lg:pb-24 bg-blue-100 min-h-screen dark:bg-blue-100 antialiased">
     <div class="container mx-auto p-6" v-if="article">
       <h1 class="text-3xl font-bold mb-4">{{ article.title }}</h1>
-      <p class="text-gray-700 mb-4">Published on: <time :datetime="article.publishDate">{{ article.publishDate }}</time></p>
+      <p class="text-gray-700 mb-4">Written on: <time :datetime="article.publishDate">{{ article.publishDate }}</time></p>
       <p class="text-base text-gray-800 whitespace-pre-line">{{ article.content }}</p>
       <p class="text-base text-gray-800 whitespace-pre-line">{{article.image }}</p>
     </div>
