@@ -8,7 +8,7 @@
               <img class="mr-4 w-16 h-16 rounded-full" src="/Assets/Images/sunsethome.jpeg" alt="sky pic">
               <div>
                 <a href="#" rel="author" class="text-xl font-bold">Aakash Dawadi</a>
-                <p class="text-base text-gray-700">Developer</p>
+                <p class="text-base text-gray-700">adoresky___</p>
                 <p class="text-base text-gray-900">
                   <time datetime="2022-02-08" title="February 8th, 2022">Feb. 24, 2019</time>
                 </p>
@@ -49,7 +49,8 @@
 const articles = ref([
   { id: 1, title: 'Pink Hopes', publishDate: '2023-10-10' },
   { id: 2, title: 'A single chance.', publishDate: '2019-02-12' },
-  { id: 3, title: 'Flying big.', publishDate: '2023-10-15' }
+  { id: 3, title: 'Choice', publishDate: '2023-10-15' },
+  { id: 4, title: 'A wave of fun', publishDate: '2022-04-21' }
 ]);
 </script>
 
