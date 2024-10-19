@@ -48,7 +48,7 @@
 <script setup>
 const articles = ref([
   { id: 1, title: 'Pink Hopes', publishDate: '2023-10-10' },
-  { id: 2, title: 'Saturday 24 2019', publishDate: '2019-02-12' },
+  { id: 2, title: 'A single chance.', publishDate: '2019-02-12' },
   { id: 3, title: 'Flying big.', publishDate: '2023-10-15' }
 ]);
 </script>

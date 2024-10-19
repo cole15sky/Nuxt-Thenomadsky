@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="bg-gradient-to-r from-indigo-600 via-red-600 to-blue-600 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+      class="bg-gradient-to-r from-indigo-800 via-green-900 to-indigo-800 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-8">
         <a class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/Assets/logo_sky.png" class="h-8" alt="Logo">
