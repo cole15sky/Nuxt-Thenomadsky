@@ -16,7 +16,12 @@
   // Create an array of image paths
   const images = ref([
   ('/Images/sunset-valley.jpg'),
-  ('/Images/sunset-valley.jpg'),
+  ('/Images/sunsethome.jpeg'),
+  ('/Images/ktm.jpg'),
+  ('/Images/sauraha.jpg'),
+  ('/Images/12.jpg'),
+  ('/Images/yak-kharka.jpg'),
+  ('/Images/pul1.JPG'),
 
 
 ]);
