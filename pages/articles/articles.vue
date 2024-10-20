@@ -10,7 +10,7 @@
             <div class="inline-flex items-center mr-3 text-sm text-blue-600">
               <img class="mr-4 w-16 h-16 rounded-full" src="/Images/sunsethome.jpeg" alt="sky pic">
               <div>
-                <a href="#" rel="author" class="text-xl font-bold">Aakash Dawadi</a>
+                <a href="#" rel="author" class="text-2xl font-bold">Aakash Dawadi</a>
                 <p class="text-base text-gray-700">adoresky___</p>
                 <p class="text-base text-gray-900">
                   <time datetime="2022-02-08" title="February 8th, 2022">Feb. 24, 2019</time>
@@ -19,19 +19,20 @@
             </div>
             
           </address>
-          <span class=" flex justify-center text-xl  mb-4"> I enjoy weaving my words through the realms of fantasy, love, and science.</span>
+          <span class="text-blue-500 underline font-bold-  flex justify-center text-md  mb-4"> "I also enjoy weaving my words through the realms of fantasy, love, and science."</span>
 
         </header>
       </article>
     </div>
-    <div class="container mx-autaao p-6">
+    <div class="container mx-auto p-2">
+      
 
-     <h1 class="text-2xl font-bold ">Article List</h1>
+     <h1 class=" flex justify-center text-2xl font-bold ">Article List</h1>
 
 
-      <table class="min-w-full table-auto border-collapse border border-gray-300">
+      <table class="min-w-full  table-auto border-collapse border border-yellow-300">
         <thead>
-          <tr class="bg-gray-100">
+          <tr class="bg-blue-300">
             <th class="border px-4 py-2">SN</th>
             <th class="border px-4 py-2">Title</th>
             <th class="border px-4 py-2">Date of written</th>
