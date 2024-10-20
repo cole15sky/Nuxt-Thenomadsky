@@ -17,7 +17,7 @@
 
             <!-- Instagram -->
             <a href="https://www.instagram.com/aakashh_10/">
-              <svg class="cursor-pointer" width="40px" height="40px" viewBox="0 0 32 32" fill="none"
+              <svg class="cursor-pointer" width="30px" height="30px" viewBox="0 0 32 32" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -60,7 +60,7 @@
             </a>
             <!-- Tweeter -->
             <a href="https://x.com/adoresky___">
-              <svg class="cursor-pointer" width="40px" height="40px" viewBox="0 0 32 32" fill="none"
+              <svg class="cursor-pointer" width="30px" height="30px" viewBox="0 0 32 32" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -73,7 +73,7 @@
             </a>
             <!-- linkdin -->
             <a href="https://www.linkedin.com/in/aakash-dawadi165/">
-              <svg class="cursor-pointer" width="40px" height="40px" viewBox="0 0 16 16"
+              <svg class="cursor-pointer" width="30px" height="30px" viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg" fill="none">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
