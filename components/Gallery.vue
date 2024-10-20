@@ -22,8 +22,6 @@
   ('/Images/12.jpg'),
   ('/Images/yak-kharka.jpg'),
   ('/Images/pul1.JPG'),
-
-
 ]);
   </script>
  
