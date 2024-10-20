@@ -2,7 +2,7 @@
     <!-- First Section: Endless flowing rivers. -->
     <div class=" mt-20 dark:bg-gradient-to-r dark:from-gray-200 dark:to-gray-300 grid md:grid-cols-2 items-center py-8">
         <div class="pr-5 pl-5">
-            <img class="rounded-xl mt-10 w-full object-cover" src="/Assets/Images/Shivaghat.jpeg"
+            <img class="rounded-xl mt-10 w-full object-cover" src="/Images/Shivaghat.jpeg"
                 alt="Mountain ranges of Manang">
         </div>
 
@@ -63,7 +63,7 @@
             </div>
 
             <div class="pr-5 pl-5">
-                <img class="rounded-xl w-full object-cover" src="/Assets/Images/sunset-valley.jpg"
+                <img class="rounded-xl w-full object-cover" src="/Images/sunset-valley.jpg"
                     alt="Sunset from the valley">
             </div>
         </div>
@@ -78,7 +78,7 @@
     <!-- Third Section: Wilder Mountains -->
     <div class="dark:bg-gradient-to-r dark:from-blue-200 dark:to-blue-300 grid md:grid-cols-2 items-center py-8">
         <div class="pr-5 pl-5">
-            <img class="rounded-xl mt-10 w-full object-cover" src="/Assets/Images/manang-up.jpg"
+            <img class="rounded-xl mt-10 w-full object-cover" src="/Images/manang-up.jpg"
                 alt="Mountain ranges of Manang">
         </div>
 
