@@ -66,7 +66,7 @@
                   </path>
                 </g>
               </svg>
-              <NuxtLink class="block py-2 px-3 text-white hover:text-gray-900" to="/articles/articles">Articles</NuxtLink>
+              <NuxtLink class="block py-2 px-3 text-white hover:text-gray-900" to="/articles">Articles</NuxtLink>
 
             </li>
 
