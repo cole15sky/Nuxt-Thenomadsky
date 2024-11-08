@@ -17,43 +17,100 @@ import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 
 const articlesData = [
-  { id: 1, title: 'Pink Hopes', publishDate: '2023-02-10' ,image: ``, content: `Those days,
-I met you
-And suddenly everything
-Made sense!
+  { id: 1, title: 'Supercharging Nuxt 3 with Server-Side Rendering (SSR): The Power of Nitro', publishDate: '2024-11-10' ,image: ``, content: `Nuxt 3 makes server-side rendering super intuitive with Nitro—it runs anything inside the server/ folder automatically. No need for extra config! I can just drop my server logic there, and Nitro will handle the rest.
 
-The path I’ve taken
-Every mistakes that I made,
-Whole my life struggles,
-including emotions like joy,love,
-Each and every stuffs of my descision…
-All it leads me to you!!
+Setting Up the Server Directory Structure
+Here’s how I need to structure the server/ folder for clean server-side logic:
 
-All my bad revolves becomes
-the good one, reasons you!!!
+server/api/: For all my API routes
+server/routes/: For organizing routes (although usually, the folder structure alone works)
+server/middleware/: Where custom middleware goes
+Example layout for clarity:
 
-Life was back being all blue,
-Where there’s someone I can hold on to…
-Passing the nights how I ended up here ?
-Bringing the strong winds along with tsunami,
-The wish, I could make was just disappear ??
-Then life could have been easy for me today ???
+plaintext
+Copy code
+|- server/
+|  |- api/
+|  |  |- blogs/
+|  |  |  |- [id].ts          # For fetching by blog ID
+|  |  |  |- index.ts          # Lists blogs
+|  |  |  |- publish.post.ts   # Publishes a blog
+|  |- middleware/
+|  |  |- auth.ts              # Authentication middleware
+Creating API Routes
+To create an endpoint, I just need to create a file in server/api.
 
-Waiting for ,
-The dark night could end up here ?
-With it’s lost rays
-Hoping for the brighter shine,
-Over the moon and under your dine…..
+For example, server/api/blogs/index.ts will handle GET and POST requests for blog posts. Nuxt 3 even lets me suffix the file with .get, .post, etc., so I don’t have to check the HTTP method inside the function!
 
-Holding,
-The day, to come up again,as before
-Intenting the soul to get back,
-Lightening up the candle with happiness of galore;
-Creating forward,toring the dark….
-Proposing the one to bent back,
-Where no one else could ever be to me….
-And, aspiration the good days to come ???
-Knowbody Knows!!⚠️
+javascript
+Copy code
+// ~/server/api/blogs/publish.post.ts
+export default defineEventHandler((event) => {
+  // Logic to save and publish
+  return { success: true };
+});
+Here, a POST request to /api/blogs/publish responds with { success: true }. Any other HTTP method will get a 404.
+
+Catch-All Routes for Flexibility
+If I want a "catch-all" route for APIs, I can create ~/server/api/[...].ts. This file catches any requests that don’t match other routes. One catch: I have to handle everything in one defineEventHandler.
+
+javascript
+Copy code
+// ~/server/api/[...].ts
+export default defineEventHandler((event) => {
+  if (event.req.url.startsWith('/api/publications')) {
+    // handle publications route
+  }
+  // Add more conditions as needed
+});
+Adding Middleware for Control
+Nuxt 3 auto-generates middleware from files in server/middleware/. Middleware runs on every request, so it’s perfect for things like authentication checks.
+
+Example: Adding auth.ts for basic auth checks:
+
+javascript
+// ~/server/middleware/auth.ts
+import { sendError } from 'h3';
+
+export default defineEventHandler((event) => {
+  if (!event.req.url.startsWith('/api') || event.req.headers.authorization) return;
+
+  sendError(event, new Error('Unauthorized'));
+});
+Creating Utilities for Reuse
+I’ll probably need utilities like custom error handlers, so I’ll add them in a helpers or utils folder in server/. Just avoid naming it api, routes, or middleware so Nuxt doesn’t try to register it.
+
+Example error handler:
+
+javascript
+// ~/server/helpers/handleError.js
+import { sendError, createError } from 'h3';
+
+export default function handleError(err, event) {
+  const error = createError({
+    statusCode: err.status,
+    statusMessage: err.status,
+    data: err.body,
+  });
+  sendError(event, error);
+}
+With this setup, Nuxt 3 keeps my SSR code clean and organized, and Nitro makes server logic and APIs way easier to manage. Just keep the structure straight, and everything else flows!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ` },
   { id: 2, title: 'A Single Chance', publishDate: '2019-02-12', content: `If you looked in the corners,
 You'd find her right there,
