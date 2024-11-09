@@ -7,7 +7,7 @@
         </div>
 
         <div class="p-4">
-            <h1 class="text-3xl flex justify-center pl-4 font-bold">Endless flowing rivers</h1>
+            <h1 class="text-3xl flex  text-black justify-center pl-4 font-bold">Endless flowing rivers</h1>
             <p class="text-xl mt-4">
                 Watching the river flow is more than just a visual experience; it’s a moment of solitude that allows for
                 deep reflection. The steady, unhurried movement of the water mirrors the natural rhythm of life,
@@ -48,7 +48,7 @@
         class="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gradient-to-r dark:from-green-200 dark:to-green-400 min-h-screen antialiased">
         <div class="grid md:grid-cols-2 items-center">
             <div class="p-4">
-                <h1 class="flex justify-center text-3xl pl-4 font-bold">Sunset from the valley</h1>
+                <h1 class="flex justify-center text-black text-3xl pl-4 font-bold">Sunset from the valley</h1>
                 <p class="text-xl p-4">
                     There’s a quiet magic in nature that has always fascinated me. From the gentle sway of trees to the
                     vastness of open skies, I’ve found peace in the simplicity of the natural world. Roaming through
@@ -83,7 +83,7 @@
         </div>
 
         <div class="p-4">
-            <h1 class="flex justify-center text-3xl pl-4 font-bold">Wilder Mountains</h1>
+            <h1 class="flex text-black justify-center text-3xl pl-4 font-bold">Wilder Mountains</h1>
             <p class="text-xl mt-4">
                 Manang, a hidden gem in the heart of the Himalayas, offers an extraordinary journey through its snowy
                 mountain ranges. The towering peaks, covered in pristine snow, create a breathtaking contrast against

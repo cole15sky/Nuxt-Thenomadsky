@@ -33,10 +33,12 @@ const scheduleText = computed(() => {
         
         
         <img  src="/nav-Img/logo_sky.png" alt="sky-logo"
-            class="absolute top-6 left-12 rounded-lg z-20 h-10 sm:h-10 md:h-10 lg:h-20 xl:h-25" />
+            class="absolute top-11 left-15 rounded-lg z-10 h-10 sm:h-10 w:10  md:h-15 " />
         <div class="relative z-20 flex items-center justify-end space-x-4 text-xs">
             <div>
-                <NuxtLink to="/login" class="flex items-center md:space-x-2">
+                <NuxtLink to="/login" 
+                active-class="text-black"
+                class="flex  items-center md:space-x-2">
                     <span>Login</span>
                     <UIcon name="material-symbols-light:lock-outline" class="w-5 h-5" />
                 </NuxtLink>
@@ -45,14 +47,16 @@ const scheduleText = computed(() => {
         <div class="relative z-20 flex justify-end">
             <div class="hidden text-md min-[1400px]:flex w-3/4 lg:justify-evenly lg:items-center">
                 <div v-for="link in links" :key="link.label">
-                    <NuxtLink :to="link.to" active-class="text-[#0058A0]">
+                    <NuxtLink :to="link.to" active-class="text-black">
                         {{ link.label }}
                     </NuxtLink>
                 </div>
                 
-                <div class="parellelogram bg-[#0058A0] py-2 px-10 flex items-center space-x-2 shadow-xl cursor-pointer">
+                <div class="parellelogram bg-blue-600 hover:bg-blue-500 file: py-2 px-10 flex items-center space-x-2 shadow-xl cursor-pointer">
                     <NuxtLink to="/gallery">
-                        <h1> Gallery </h1>
+                        <h1 active-class="text-black"
+                        > Gallery
+                             </h1>
                 </NuxtLink>
 
                 </div>
