@@ -29,18 +29,12 @@ const scheduleText = computed(() => {
 <template>
     <div class=" h[1400px]relative bg-[center_top_-20rem] h-[400px] w-cover bg-gradient-to-r from-[#00012D] to-[#03025f] bg-cover text-white font-semibold py-4 px-2 md:px-20 space-y-4 text-sm"
         style="background-image: url('/Images/IMG_5508_Original.jpg');">
-        <div class="absolute inset-0 bg-black opacity-60 h-[400px]"></div>
+        <div class="absolute inset-0 bg-black opacity-40 h-[400px]"></div>
         
         
         <img  src="/nav-Img/logo_sky.png" alt="sky-logo"
-            class="absolute top-6 left-12 rounded-lg z-10 h-20 w-25" />
+            class="absolute top-6 left-12 rounded-lg z-20 h-10 sm:h-10 md:h-10 lg:h-20 xl:h-25" />
         <div class="relative z-20 flex items-center justify-end space-x-4 text-xs">
-            <div>
-                <NuxtLink to="/register" class="flex items-center md:space-x-2">
-                    <span>Register now</span>
-                    <UIcon name="heroicons:arrow-long-right-20-solid" class="w-5 h-5" />
-                </NuxtLink>
-            </div>
             <div>
                 <NuxtLink to="/login" class="flex items-center md:space-x-2">
                     <span>Login</span>
@@ -55,14 +49,19 @@ const scheduleText = computed(() => {
                         {{ link.label }}
                     </NuxtLink>
                 </div>
+                
                 <div class="parellelogram bg-[#0058A0] py-2 px-10 flex items-center space-x-2 shadow-xl cursor-pointer">
-                    <UIcon name="ic:baseline-video-camera-front" class="w-5 h-4" />
-                    <NuxtLink to="/gallery"><h1 class="">Gallery </h1></NuxtLink>
+                    <NuxtLink to="/gallery">
+                        <h1> Gallery </h1>
+                </NuxtLink>
+
                 </div>
             </div>
             <UIcon name='ic:baseline-menu' class="min-[1400px]:hidden w-10 h-10 cursor-pointer"
                 @click="isOpen = true" />
         </div>
+
+
         <div class="hidden">
             <USlideover v-model="isOpen" prevent-close>
                 <UCard class="flex flex-col flex-1"
@@ -82,8 +81,7 @@ const scheduleText = computed(() => {
                         </div>
 
                         <div class="parellelogram bg-[#0058A0] py-2 px-6 flex w-fit cursor-pointer">
-                            <UIcon name="ic:baseline-video-camera-front" class="w-6 h-5" />
-                            <h1>Live Streaming</h1>
+                          <NuxtLink to="/gallery"><h1 class="">Gallery </h1></NuxtLink>
                         </div>
                     </Placeholder>
                 </UCard>

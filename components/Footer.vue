@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <div class="flex-grow"></div>
-    <footer class="bg-white rounded-lg shadow dark:bg-gray-900">
+    <footer class="bg-white rounded-lg shadow bg-gradient-to-r from-[#00012D] to-[#03025f]">
       <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
           <a class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse cursor-pointer">
-            <!-- <img src="" class="h-8" alt="site logo" /> -->
+            <img src="/nav-Img/logo_sky.png" class="h-8 rounded-md" alt="site logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Tech-NomadSky</span>
           </a>
