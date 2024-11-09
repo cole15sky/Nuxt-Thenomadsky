@@ -5,7 +5,7 @@
       <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
           <a class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse cursor-pointer">
-            <img src="/Assets/logo_sky.png" class="h-8" alt="site logo" />
+            <!-- <img src="" class="h-8" alt="site logo" /> -->
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Tech-NomadSky</span>
           </a>

@@ -1,106 +1,101 @@
+<script setup>
+const links = [{
+    label: 'Home',
+    to: '/'
+},
+{
+    label: 'About',
+    to: '/about'
+},
+{
+    label: 'Articles',
+    to: '/articles'
+},
+
+
+]
+
+const isOpen = ref(false)
+const route = useRoute()
+
+const scheduleText = computed(() => {
+    switch (route.path) {
+        case '/agenda':
+            return 'Event Schedules'
+    }
+})
+
+</script>
 <template>
-  <div>
-    <nav
-      class="bg-gradient-to-r from-indigo-800 via-green-900 to-indigo-800 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-8">
-        <a class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/Assets/logo_sky.png" class="h-8" alt="Logo">
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Tech-NomadSky</span>
-        </a>
-         <!-- Mobile Menu Toggle Button -->
-         <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
-          <button @click="isMenuOpen = !isMenuOpen" type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky" aria-expanded="isMenuOpen">
-            <span class="sr-only">Open main menu</span>
-            <svg v-if="!isMenuOpen" class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15" />
-            </svg>
-            <svg v-if="isMenuOpen" class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+    <div class=" h[1400px]relative bg-[center_top_-20rem] h-[400px] w-cover bg-gradient-to-r from-[#00012D] to-[#03025f] bg-cover text-white font-semibold py-4 px-2 md:px-20 space-y-4 text-sm"
+        style="background-image: url('/Images/IMG_5508_Original.jpg');">
+        <div class="absolute inset-0 bg-black opacity-60 h-[400px]"></div>
+        
+        
+        <img  src="/nav-Img/logo_sky.png" alt="sky-logo"
+            class="absolute top-6 left-12 rounded-lg z-10 h-20 w-25" />
+        <div class="relative z-20 flex items-center justify-end space-x-4 text-xs">
+            <div>
+                <NuxtLink to="/register" class="flex items-center md:space-x-2">
+                    <span>Register now</span>
+                    <UIcon name="heroicons:arrow-long-right-20-solid" class="w-5 h-5" />
+                </NuxtLink>
+            </div>
+            <div>
+                <NuxtLink to="/login" class="flex items-center md:space-x-2">
+                    <span>Login</span>
+                    <UIcon name="material-symbols-light:lock-outline" class="w-5 h-5" />
+                </NuxtLink>
+            </div>
         </div>
-
-        <!-- Navbar Links (Responsive) -->
-        <div :class="['items-center justify-between w-full md:flex md:w-auto md:order-1', isMenuOpen ? '' : 'hidden']"
-          id="navbar-sticky">
-          <ul
-            class="text-md flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-
-            <!-- Home -->
-            <li class="flex items-center space-x-2">
-              <svg class="w-5 h-5 md:w-6 md:h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M8 0L0 6V8H1V15H4V10H7V15H15V8H16V6L14 4.5V1H11V2.25L8 0ZM9 10H12V13H9V10Z" fill="white" />
-              </svg>
-              <NuxtLink class="block py-2 px-3 text-white hover:text-gray-800" to="/">Home</NuxtLink>
-            </li>
-
-            <!-- About -->
-            <li class="flex items-center space-x-2">
-              <svg class="w-5 h-5 md:w-6 md:h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 64 64">
-                <path fill="white"
-                  d="M63.329,57.781C62.954,57.219,53.892,44,31.999,44C10.112,44,1.046,57.219,0.671,57.781 c-1.223,1.84-0.727,4.32,1.109,5.547c1.836,1.223,4.32,0.727,5.547-1.109C7.397,62.117,14.347,52,31.999,52 c17.416,0,24.4,9.828,24.674,10.219C57.446,63.375,58.712,64,60.009,64c0.758,0,1.531-0.219,2.211-0.672 C64.056,62.102,64.556,59.621,63.329,57.781z" />
-                <path fill="white"
-                  d="M31.999,40c8.836,0,16-7.16,16-16v-8c0-8.84-7.164-16-16-16s-16,7.16-16,16v8 C15.999,32.84,23.163,40,31.999,40z M23.999,16c0-4.418,3.586-8,8-8c4.422,0,8,3.582,8,8v8c0,4.418-3.578,8-8,8 c-4.414,0-8-3.582-8-8V16z" />
-              </svg>
-              <NuxtLink class="block py-2 px-3 text-white hover:text-gray-800" to="/about">About</NuxtLink>
-            </li>
-
-            <!-- Articles -->
-            <li class="flex items-center space-x">
-              <svg fill="#ffffff" width="25px" height="25px" viewBox="-2 0 19 19" xmlns="http://www.w3.org/2000/svg"
-                class="cf-icon-svg" transform="rotate(90)" stroke="#ffffff">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M5.9 4.544 2.534 7.912 1.225 6.604a1.111 1.111 0 0 1 0-1.567l1.8-1.8a1.112 1.112 0 0 1 1.568 0zm7.926 11.565a.456.456 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.294 1.294 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.278 1.278 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a1.962 1.962 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z">
-                  </path>
-                </g>
-              </svg>
-              <NuxtLink class="block py-2 px-3 text-white hover:text-gray-900" to="/articles">Articles</NuxtLink>
-
-            </li>
-
-            <!-- Gallery -->
-            <li class="flex items-center space-x">
-              <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M18.5116 10.0767C18.5116 10.8153 17.8869 11.4142 17.1163 11.4142C16.3457 11.4142 15.7209 10.8153 15.7209 10.0767C15.7209 9.33801 16.3457 8.7392 17.1163 8.7392C17.8869 8.7392 18.5116 9.33801 18.5116 10.0767Z"
-                    fill="#ffffff"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M18.0363 5.53205C16.9766 5.39548 15.6225 5.39549 13.9129 5.39551H10.0871C8.37751 5.39549 7.02343 5.39548 5.9637 5.53205C4.87308 5.6726 3.99033 5.96873 3.29418 6.63601C2.59803 7.30329 2.28908 8.14942 2.14245 9.19481C1.99997 10.2106 1.99999 11.5085 2 13.1472V13.2478C1.99999 14.8864 1.99997 16.1843 2.14245 17.2001C2.28908 18.2455 2.59803 19.0916 3.29418 19.7589C3.99033 20.4262 4.87307 20.7223 5.9637 20.8629C7.02344 20.9994 8.37751 20.9994 10.0871 20.9994H13.9129C15.6225 20.9994 16.9766 20.9994 18.0363 20.8629C19.1269 20.7223 20.0097 20.4262 20.7058 19.7589C21.402 19.0916 21.7109 18.2455 21.8575 17.2001C22 16.1843 22 14.8864 22 13.2478V13.1472C22 11.5085 22 10.2106 21.8575 9.19481C21.7109 8.14942 21.402 7.30329 20.7058 6.63601C20.0097 5.96873 19.1269 5.6726 18.0363 5.53205ZM6.14963 6.8576C5.21373 6.97821 4.67452 7.2044 4.28084 7.58175C3.88716 7.95911 3.65119 8.47595 3.52536 9.37303C3.42443 10.0926 3.40184 10.9919 3.3968 12.1682L3.86764 11.7733C4.99175 10.8305 6.68596 10.8846 7.74215 11.897L11.7326 15.7219C12.1321 16.1049 12.7611 16.1571 13.2234 15.8457L13.5008 15.6589C14.8313 14.7626 16.6314 14.8664 17.8402 15.9092L20.2479 17.9862C20.3463 17.7222 20.4206 17.4071 20.4746 17.0219C20.6032 16.1056 20.6047 14.8977 20.6047 13.1975C20.6047 11.4972 20.6032 10.2893 20.4746 9.37303C20.3488 8.47595 20.1128 7.95911 19.7192 7.58175C19.3255 7.2044 18.7863 6.97821 17.8504 6.8576C16.8944 6.73441 15.6343 6.73298 13.8605 6.73298H10.1395C8.36575 6.73298 7.10559 6.73441 6.14963 6.8576Z"
-                    fill="#ffffff"></path>
-                  <g opacity="0.5">
-                    <path
-                      d="M17.0866 2.61039C16.2268 2.49997 15.1321 2.49998 13.7675 2.5H10.6778C9.31314 2.49998 8.21844 2.49997 7.35863 2.61039C6.46826 2.72473 5.72591 2.96835 5.13712 3.53075C4.79755 3.8551 4.56886 4.22833 4.41309 4.64928C4.91729 4.41928 5.48734 4.28374 6.12735 4.20084C7.21173 4.06037 8.5973 4.06038 10.3466 4.06039H14.2615C16.0108 4.06038 17.3963 4.06037 18.4807 4.20084C19.0397 4.27325 19.5453 4.38581 20.0003 4.56638C19.8457 4.17917 19.6253 3.83365 19.3081 3.53075C18.7193 2.96835 17.977 2.72473 17.0866 2.61039Z"
-                      fill="#ffffff"></path>
-                  </g>
-                </g>
-              </svg>
-              <NuxtLink class="block py-2 px-3 text-white hover:text-gray-900" to="/gallery">Gallery</NuxtLink>
-
-            </li>
-          </ul>
+        <div class="relative z-20 flex justify-end">
+            <div class="hidden text-md min-[1400px]:flex w-3/4 lg:justify-evenly lg:items-center">
+                <div v-for="link in links" :key="link.label">
+                    <NuxtLink :to="link.to" active-class="text-[#0058A0]">
+                        {{ link.label }}
+                    </NuxtLink>
+                </div>
+                <div class="parellelogram bg-[#0058A0] py-2 px-10 flex items-center space-x-2 shadow-xl cursor-pointer">
+                    <UIcon name="ic:baseline-video-camera-front" class="w-5 h-4" />
+                    <NuxtLink to="/gallery"><h1 class="">Gallery </h1></NuxtLink>
+                </div>
+            </div>
+            <UIcon name='ic:baseline-menu' class="min-[1400px]:hidden w-10 h-10 cursor-pointer"
+                @click="isOpen = true" />
         </div>
-      </div>
-    </nav>
-  </div>
+        <div class="hidden">
+            <USlideover v-model="isOpen" prevent-close>
+                <UCard class="flex flex-col flex-1"
+                    :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
+                    <template #header>
+                        <div class="flex items-center justify-end">
+                            <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1"
+                                @click="isOpen = false" />
+                        </div>
+                    </template>
+
+                    <Placeholder class="h-full space-y-2">
+                        <div v-for="link in links" :key="link.label">
+                            <NuxtLink :to="link.to" active-class="text-[#0058A0]">
+                                {{ link.label }}
+                            </NuxtLink>
+                        </div>
+
+                        <div class="parellelogram bg-[#0058A0] py-2 px-6 flex w-fit cursor-pointer">
+                            <UIcon name="ic:baseline-video-camera-front" class="w-6 h-5" />
+                            <h1>Live Streaming</h1>
+                        </div>
+                    </Placeholder>
+                </UCard>
+            </USlideover>
+        </div>
+        <p class="hidden md:block md:absolute bottom-7 left-30 font-semibold text-4xl z-20">{{ scheduleText }}</p>
+    </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
 
-const isMenuOpen = ref(false);
-</script>
+<style scoped>
+.parellelogram {
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+</style>
