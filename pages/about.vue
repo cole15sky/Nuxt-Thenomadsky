@@ -1,6 +1,6 @@
 <template>
     <div>
-      <main class="pt-8 pb-16 lg:pt-16 mt-14 lg:pb-24 bg-gradient-to-r from-blue-200 to-blue-400 dark:bg-gradient-to-r dark:from-green-200 dark:to-green-400 min-h-screen antialiased">
+      <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-r from-blue-200 to-blue-400 dark:bg-gradient-to-r dark:from-green-200 dark:to-green-400 min-h-screen antialiased">
         <section class="max-w-4xl mx-auto text-center">
           <h1 class="text-4xl lg:text-6xl font-extrabold text-blue-700 dark:text-green-700 mb-6">A Curious Mind</h1>
           <p class="text-xl lg:text-2xl font-semibold text-gray-800 dark:text-gray-600 leading-relaxed">
