@@ -27,7 +27,7 @@ const scheduleText = computed(() => {
 
 </script>
 <template>
-    <div class=" h[1400px]relative bg-[center_top_-20rem] h-[400px] w-cover bg-gradient-to-r from-[#00012D] to-[#03025f] bg-cover text-white font-semibold py-4 px-2 md:px-20 space-y-4 text-sm"
+    <div class=" sticky h[1400px]relative bg-[center_top_-20rem] h-[400px] w-cover bg-gradient-to-r from-[#00012D] to-[#03025f] bg-cover text-white font-semibold py-4 px-2 md:px-20 space-y-4 text-sm"
         style="background-image: url('/Images/IMG_5508_Original.jpg');">
         <div class="absolute inset-0 bg-black opacity-40 h-[400px]"></div>
         
@@ -91,7 +91,6 @@ const scheduleText = computed(() => {
                 </UCard>
             </USlideover>
         </div>
-        <p class="hidden md:block md:absolute bottom-7 left-30 font-semibold text-4xl z-20">{{ scheduleText }}</p>
     </div>
 </template>
 

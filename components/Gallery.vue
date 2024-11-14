@@ -43,7 +43,26 @@ const getGridClass = (image) => {
 </script>
 
 <template>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-4">
+   <div class="bg-white h-[350px]">
+        <h1 class="text-gray-800 text-2xl mt-10 flex justify-center"> An Ode to Quiet Reflection
+        </h1>
+        <p class="p-10 text-md text-gray-700">
+            In the quiet spaces of existence, clarity emerges, revealing the depth and wonder of life’s mysteries.
+            Nature, with its soft winds, flowing rivers, and golden sunsets, offers profound moments of reflection. Each
+            element—vast landscapes, the intricate patterns of leaves, the subtle movement of shadows—invites a deeper
+            connection, drawing awareness to the simple yet profound beauty of the world.
+            <br>
+            I believe such a journey unfolds with a sense of purpose found in observing and appreciating each detail.
+            True fulfillment lies in embracing simplicity, letting curiosity reveal life’s layers and inspiring a
+            reverence for both the seen and the hidden. Here, in this stillness, lies an enduring strength—a reminder
+            that life’s essence is often discovered in quiet observation and thoughtful presence.
+            
+        </p>
+        <h1 class="  text-gray-800  pt-[50px] flex justify-center text-2xl font-bold mb-4">"Among these marvels, I gather moments of wonder, each one a thread in the fabric of my story."</h1>
+
+
+    </div>
+    <div class="grid grid-cols-1 mt-2 md:grid-cols-2 lg:grid-cols-3 gap-5 p-4">
       <div
         v-for="(image, index) in images"
         :key="index"

@@ -1,8 +1,12 @@
 <template>
-  <main class="pt-8 pb-16 lg:pt-16 mt-14 lg:pb-24 bg-blue-100 min-h-screen dark:bg-blue-100 antialiased">
+  <main class="pt-8 pb-16 lg:pt-16  lg:pb-24 bg-blue-100 min-h-screen dark:bg-blue-100 antialiased">
     <div class="container mx-auto p-6" v-if="article">
-      <h1 class="text-3xl font-bold mb-4">{{ article.title }}</h1>
-      <p class="text-gray-700 mb-4">Written on: <time :datetime="article.publishDate">{{ article.publishDate }}</time></p>
+      <h1 class="text-3xl text-black font-bold mb-4">{{ article.title }}</h1>
+      
+      <p class="text-gray-700 mb-4 flex flex-row gap-2 ">
+        <time class="text-md font-semibold" :datetime="article.publishDate">{{ article.publishDate }}</time>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="currentColor"><path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157l3.712 3.712l1.157-1.157a2.625 2.625 0 0 0 0-3.712m-2.218 5.93l-3.712-3.712l-8.4 8.4a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32z"/><path d="M5.25 5.25a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3V13.5a.75.75 0 0 0-1.5 0v5.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5V8.25a1.5 1.5 0 0 1 1.5-1.5h5.25a.75.75 0 0 0 0-1.5z"/></g></svg>
+      </p>
       <p class="text-base text-gray-800 whitespace-pre-line">{{ article.content }}</p>
       <p class="text-base text-gray-800 whitespace-pre-line">{{article.image }}</p>
     </div>
@@ -97,20 +101,6 @@ export default function handleError(err, event) {
 With this setup, Nuxt 3 keeps my SSR code clean and organized, and Nitro makes server logic and APIs way easier to manage. Just keep the structure straight, and everything else flows!
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ` },
   { id: 2, title: 'A Single Chance', publishDate: '2019-02-12', content: `If you looked in the corners,
 You'd find her right there,
@@ -203,7 +193,28 @@ Memories bring back, Memories bring back you!! 😂`
 
 
   
-  }
+  },
+    { id: 5, title: 'Genious is knowing when to stop ?', publishDate: '2020-06-02', content: `
+
+Being enrolled without looking for any demand, expectations and all other stuffs. Creating up the momentum so that we all did loved the journey passing each of their happiest moment together.
+Those god damn! excitement thinking unitely we do exist and definitely could archive each & every prospect in this today’s world.
+Yes, Selfish world, where nobody cares for nothing until and unless any of their respective resons beholds. Matching the unmatched thought happily and even happierly to sustain the existing of someone’s in their comming time aheads.
+Totally bulshitts!
+Cause, we do fear to let the feelings and those golden memos die easily which infact is totally intrue. A second’s of happiness worths, if it had have ever touched deeply to anyone in their personal prospect. But, it doesn’t means to be expecting the same kind and always…
+And there comes the word “Genious”.
+An extra ordinary and even heavy one.
+Imagine, A day , 2nd day, 3rd day and continuously each and every day being connected with someone’s by nature,care,happiness, trouble and much more with whom our inner core really wants to sustain for! At this phase, how could someone stop those crucial attachment which have had becomes an habit being compared with the habit of breathing ???
+That’s the major concern, we couldn’t ever intend to accept for rest of the comming days, infact each times the bright hope of being connected emotional rewinds the heart and let realise ourself that we can’t.
+
+Stop ? how ??
+Concluding; the heart not to being attached with the joy and excitement in presence of whom the spent each second could be a new life in itself ?
+Is it possible, training the mindset to stop where we do were living our life to fullest and in next level vibes and fever.
+Ok that’s fine, we did commence.What if we did forget our own exousting and real taste for which we are being proud and recognized for ? At this peak, commencing the directions could ever be an effective one ?
+
+There we found a great mistery!
+Think once…,
+`}
+
 
 ];
 

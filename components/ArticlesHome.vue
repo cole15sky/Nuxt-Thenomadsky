@@ -1,4 +1,5 @@
 <template>
+   
     <!-- First Section: Endless flowing rivers. -->
     <div class="  dark:bg-gradient-to-r dark:from-gray-200 dark:to-gray-300 grid md:grid-cols-2 items-center py-8">
         <div class="pr-5 pl-5">
@@ -18,6 +19,7 @@
                 tranquility. As the water steadily moves along its path, it seems to carry away all the noise and
                 distractions of life. The quiet rustling of the current against the banks and the occasional call of
                 birds overhead creates a serene atmosphere where time seems to stand still.
+
             </p>
         </div>
     </div>
