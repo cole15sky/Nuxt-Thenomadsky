@@ -2,9 +2,6 @@
     <div>
         <QuillEditor :options="options" contentType="html"/>  
     </div>
-
-   
-     
 </template>
 
 <script setup>

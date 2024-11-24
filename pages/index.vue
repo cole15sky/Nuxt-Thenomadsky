@@ -1,5 +1,5 @@
 <template>
-    <div mt-100>
+    <div class="bg-black">
         <section>
         <ClientOnly>
             <Quill v-model="body"/>
